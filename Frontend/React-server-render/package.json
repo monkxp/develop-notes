@@ -4,9 +4,7 @@
   "description": "Several years ago, I encountered a project where the mobile version suffered from slow load times. To address this, we initiated a research project aimed at improving performance. Our initial efforts involved caching the JavaScript bundle in the browser and splitting it into multiple files. As a next step, we explored server-side rendering (SSR) to see if it could further enhance performance. In this section, I'll review our findings regarding server-side rendering technologies.",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config webpack.server.js",
-    "start": "node dist/server.bundle.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node dist/server.bundle.js && webpack --config webpack.client.js"
   },
   "author": "Samuel Zhang",
   "license": "ISC",
