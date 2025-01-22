@@ -4,6 +4,7 @@ import ReactDOMServer from "react-dom/server";
 import App from "./pages/App";
 
 const app = express();
+app.use(express.static("public"));
 
 const html = ReactDOMServer.renderToString(<App />);
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
       </head>
       <body>
         <div id="root">${html}</div>
+        <script src="/client.bundle.js"></script>
       </body>
     </html>
   `);
